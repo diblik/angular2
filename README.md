@@ -2,8 +2,8 @@
 
 # Spuštění
 * stahněte si tento projekt
-* provedtě instalaci poslední stable verze node.js s npm: https://nodejs.org/en/
-* v místě kde se nachazí package.json spuste příkaz: npm install
-* dále spustte: npm run typings install
-* spustění, build app provedete přes: npm start
+* provedtě instalaci poslední stable verze __node.js__ s __npm__: https://nodejs.org/en/
+* v místě, kde se nachazí __package.json__ spusťte příkaz: __npm install__
+* dále spusťte: __npm run typings install__
+* spustění, build app provedete přes: __npm start__
 * podrobněji viz: https://angular.io/docs/ts/latest/quickstart.html#!#prereq
