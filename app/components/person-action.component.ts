@@ -1,9 +1,7 @@
 import { Component, EventEmitter, Output, Input } from '@angular/core';
 import { Person } from '../entity/person';
-import { PersonService } from '../service/person.service';
 
 @Component({
-    providers: [PersonService],
     selector: 'person-action',
     templateUrl: 'app/components/person-action.component.html'
 })
@@ -24,8 +22,6 @@ export class PersonActionComponent {
 
     @Output()
     onDeleteEmit = new EventEmitter();
-
-    constructor(private personService: PersonService) { }
 
     onCreate(): void {
         console.log("onCreate");

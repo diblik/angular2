@@ -30,7 +30,10 @@ export class PersonsComponent implements OnInit {
 
   onSave(): void {
     this.personService.savePerson(this.person).then(person => {
-      this.persons.push(person);
+      // pridavam jen nove osoby, zbytek se resi pres biding
+      if(this.person._id == null){
+        this.persons.push(person);
+      }
       this.enableSaveButton = false;
       this.person = null;
     });
