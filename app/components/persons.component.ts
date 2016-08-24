@@ -35,6 +35,7 @@ export class PersonsComponent implements OnInit {
         this.persons.push(person);
       }
       this.enableSaveButton = false;
+      this.enableDeleteButton = false;
       this.person = null;
     });
   }
