@@ -12,3 +12,18 @@
 
 # Spuštění testů
 * spustění testů app provedete přes: __npm test__
+
+# Nastaveni mocku service
+* pokud nemáme k dispozici REST API je možne service zamockovat
+* v souboru __app.module.ts__ změníme:
+```
+providers: [ 
+   { provide: PersonService, useClass: PersonService }
+ ],
+```
+na 
+```
+providers: [ 
+   { provide: PersonService, useClass: PersonServiceMock } 
+ ],
+```
