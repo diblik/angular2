@@ -3,7 +3,7 @@ import { Person } from '../entity/person';
 import { PersonService } from '../service/person.service';
 
 @Component({
-  providers: [PersonService],
+  //providers: [PersonService],
   selector: 'persons',
   templateUrl: 'app/components/persons.component.html'
 })

@@ -11,11 +11,12 @@ import { PersonActionComponent }  from './components/person-action.component';
 import { AppComponent }  from './components/app.component';
 // providers
 import { PersonService } from './service/person.service';
+import { PersonServiceMock } from './service/person.service.mock';
 
 
 @NgModule({
- providers: [
-   PersonService
+ providers: [ 
+   { provide: PersonService, useClass: PersonService } //PersonServiceMock
  ],
  imports: [
     BrowserModule,
