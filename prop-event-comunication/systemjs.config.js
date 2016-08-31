@@ -7,15 +7,14 @@
   var map = {
     'app':                        'app', // 'dist',
     '@angular':                   'node_modules/@angular',
-    'angular2-in-memory-web-api': 'node_modules/angular2-in-memory-web-api',
     'rxjs':                       'node_modules/rxjs'
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
     'app':                        { main: 'main.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
-    'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
   };
+  // Definice angluar packages - jen definice, pridani do packages bude nize
   var ngPackageNames = [
     'common',
     'compiler',
@@ -32,12 +31,15 @@
   function packIndex(pkgName) {
     packages['@angular/'+pkgName] = { main: 'index.js', defaultExtension: 'js' };
   }
+  
   // Bundled (~40 requests):
+  // pridani pro UMD package - pro tento priklad se pouziva toto
   function packUmd(pkgName) {
     packages['@angular/'+pkgName] = { main: '/bundles/' + pkgName + '.umd.js', defaultExtension: 'js' };
   }
   // Most environments should use UMD; some (Karma) need the individual index files
   var setPackageConfig = System.packageWithIndex ? packIndex : packUmd;
+
   // Add package entries for angular packages
   ngPackageNames.forEach(setPackageConfig);
   var config = {

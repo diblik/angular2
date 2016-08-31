@@ -24,7 +24,12 @@
     //     for imports from the app folder
     System.config({
       packages: {
-        'app': {defaultExtension: 'js'}
+        'app':  {defaultExtension: 'js' },
+        'zone.js': {defaultExtension: 'js' },
+      },
+      map: {
+        'app':                    'app', // 'dist',
+        'zone.js':                   'node_modules/zone.js',
       }
     });
     // workaround pro nasobne zobrazeni/spusteni nekterych testu

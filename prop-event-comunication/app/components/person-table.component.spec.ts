@@ -2,7 +2,6 @@ import {Component} from '@angular/core';
 import {TestBed, async} from '@angular/core/testing';
 import {PersonTableComponent} from './person-table.component';
 import {Person} from '../entity/person';
-import '../../node_modules/zone.js/lib/zone-spec/async-test.js'
 
 // MOCK
 let persons: Person[] = [
