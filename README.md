@@ -8,5 +8,5 @@
 * https://angular.io/docs/ts/latest/cookbook/component-communication.html#!#child-to-parent
 
 # shared-service-comunication
-* jednolive komponenty spolu komunikují pomocí zdílené service
+* jednolive komponenty spolu komunikují pomocí sdílené service
 * https://angular.io/docs/ts/latest/cookbook/component-communication.html#!#bidirectional-service
