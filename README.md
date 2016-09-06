@@ -6,7 +6,9 @@
 # prop-event-comunication
 * jednolive komponenty spolu komunikují pomocí property a event bindingu
 * https://angular.io/docs/ts/latest/cookbook/component-communication.html#!#child-to-parent
+* [readme.md](prop-event-comunication/README.md)
 
 # shared-service-comunication
-* jednolive komponenty spolu komunikují pomocí zdílené service
+* jednolive komponenty spolu komunikují pomocí sdílené service
 * https://angular.io/docs/ts/latest/cookbook/component-communication.html#!#bidirectional-service
+* [readme.md](shared-service-comunication/README.md)
