@@ -27,14 +27,9 @@ export class PersonSharedService {
 
     selectPerson(person: Person): void {
         console.log("PersonSharedService.selectPerson(person)", person);
-        this.persons.getValue().forEach(value => {
-            if (value._id === person._id) {
-                value.isSelected = true;
-                this.selectedPerson.next(person);
-            } else {
-                value.isSelected = false;
-            }
-        })
+        this.disableSelectedPerson();
+        person.isSelected = true;
+        this.selectedPerson.next(person);
     }
 
     disableSelectedPerson(): void {

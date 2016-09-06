@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TestBed, async, fakeAsync, inject, TestComponentBuilder } from '@angular/core/testing';
+import { TestBed, async, fakeAsync, inject } from '@angular/core/testing';
 import { PersonTableComponent } from './person-table.component';
 import { PersonSharedService } from './person-shared.service';
 import { Person } from '../entity/person';

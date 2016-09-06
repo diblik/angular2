@@ -19,7 +19,7 @@ export class PersonActionComponent {
             this.enableDeleteButton = person != null;
             this.enableSaveButton = person != null
 
-            // je vybranna nova tj. jeste neulozena ooba 
+            // je vybranna nova tj. jeste neulozena osoba 
             if(person != null && person._id == null){
                this.enableDeleteButton = false;
             }

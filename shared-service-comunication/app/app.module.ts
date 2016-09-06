@@ -13,8 +13,6 @@ import { AppComponent }  from './components/app.component';
 import { PersonService } from './service/person.service';
 import { PersonServiceMock } from './service/person.service.mock';
 
-import { AppCmp  } from './todo.component';
-
 @NgModule({
  providers: [ 
    { provide: PersonService, useClass: PersonService }, //PersonServiceMock
