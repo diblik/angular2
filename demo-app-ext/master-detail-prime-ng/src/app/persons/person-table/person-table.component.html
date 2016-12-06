@@ -1,0 +1,17 @@
+<br>
+<h1>Osoby</h1>
+<p-dataTable [value]="persons" selectionMode="single" [(selection)]="selected" (onRowSelect)="onRowSelect($event)" [paginator]="true"
+  rows="15" [responsive]="true">
+  <!--<header>Osoby</header>-->
+  <p-column field="id" header="#" [sortable]="true"></p-column>
+  <p-column field="firstname" header="jmeno" [sortable]="true"></p-column>
+  <p-column field="lastname" header="prijmeni" [sortable]="true"></p-column>
+  <p-column field="email" header="email" [sortable]="true"></p-column>
+  <footer>
+    <div class="ui-helper-clearfix" style="width:100%">
+      <button type="button" pButton icon="fa-plus" style="float:left" (click)="onNew()" label="Nový"></button>
+      <button type="button" pButton icon="fa-edit" style="float:left" (click)="onDetail()" label="Detail" [disabled]="!selected"></button>
+      <button type="button" pButton icon="fa-close" style="float:left" (click)="onRemove()" label="Smazat" [disabled]="!selected"></button>
+    </div>
+  </footer>
+</p-dataTable>
