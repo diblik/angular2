@@ -26,6 +26,7 @@ export class ServiceComponent implements OnInit {
     })
 
     eventAggregatorService.listenEventData(Events.showConfirmDialog).subscribe((data)=> {
+      console.log("jsem tu");
       this.confirmationService.confirm({
         header: data.header || "Info",
         message: data.message || 'Are you sure that you want to perform this action?',

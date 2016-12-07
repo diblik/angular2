@@ -15,8 +15,6 @@ export class PersonDetailTemplateDrivenComponent implements OnInit {
 
   private person: Person;
   private changed: boolean = false;
-  private genders: SelectItem[];
-  private formInNewMode: boolean = true;
   private isSubmitted: boolean = false;
 
   constructor(private router: Router,
@@ -29,8 +27,6 @@ export class PersonDetailTemplateDrivenComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.initGenders();
-
     this.route.data
       .map((data: { person: Person }) => {
         if(!data.person){
@@ -40,20 +36,12 @@ export class PersonDetailTemplateDrivenComponent implements OnInit {
       })
       .subscribe((person) => {
         this.person = person;
-        this.formInNewMode = false;
         console.log("PersonDetailTemplateDrivenComponent - route.data.person", this.person);
       });
   }
 
-  initGenders() {
-    this.genders = [];
-    this.genders.push({label: 'Vyberte pohlaví', value: ""});
-    this.genders.push({label: 'Muž', value: "1"});
-    this.genders.push({label: 'Žena', value: "0"});
-  }
-
   onSubmit({value, valid}: { value: Person, valid: boolean }) {
-    console.log(this.person, value, valid, this.formInNewMode, this.changed);
+    console.log(this.person, value, valid, this.changed);
     if (valid && this.changed) {
       this.isSubmitted = true;
       this.personService.savePerson(this.person).then(() => {
@@ -67,7 +55,8 @@ export class PersonDetailTemplateDrivenComponent implements OnInit {
   }
 
   canDeactivate(): Promise<boolean> | boolean {
-    if (!this.person || !this.changed || this.isSubmitted) {
+    console.log("zavolano2");
+    if (!this.changed || this.isSubmitted) {
       return true;
     }
 

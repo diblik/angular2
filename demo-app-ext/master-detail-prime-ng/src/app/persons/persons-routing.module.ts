@@ -28,10 +28,11 @@ const appRoutes: Routes = [
   // children: [ // children znamena ze v PersonTableComponent musi byt <router-outler>
   {
     path: ':id',
-    // component: PersonDetailReactiveComponent,
+    // component: PersonDetailComponent,
     // component: PersonDetailTemplateDrivenComponent,
-    component: PersonDetailComponent,
-    // component: PersonDetailModelDrivenComponent,
+    component: PersonDetailModelDrivenComponent,
+
+    // component: PersonDetailReactiveComponent,
     // component: PersonDetailPartiallyModelDrivenComponent,
     canDeactivate: [CanDeactivateGuard],
     resolve: {

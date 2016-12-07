@@ -24,7 +24,6 @@ import { PersonDetailComponent } from './person-detail/person-detail.component';
 import { GendersComponent } from './genders/genders.component';
 import {RadioButtonModule} from "primeng/components/radiobutton/radiobutton";
 
-
 @NgModule({
   imports: [
     CommonModule,
