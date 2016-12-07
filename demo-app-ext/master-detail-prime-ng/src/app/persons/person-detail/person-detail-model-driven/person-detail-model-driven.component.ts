@@ -90,6 +90,8 @@ export class PersonDetailModelDrivenComponent implements OnInit, CanComponentDea
     // detect change
     this.personForm.valueChanges.subscribe((data) => {
       this.changed = true;
+      let pp = new Person();
+      pp.setFirstname("test");
     })
   }
 

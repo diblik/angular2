@@ -23,6 +23,7 @@ import { PersonDetailPartiallyModelDrivenComponent } from './person-detail/perso
 import { PersonDetailComponent } from './person-detail/person-detail.component';
 import { GendersComponent } from './genders/genders.component';
 import {RadioButtonModule} from "primeng/components/radiobutton/radiobutton";
+import {StartWithADirective} from "./start-with-a.directive";
 
 @NgModule({
   imports: [
@@ -49,6 +50,7 @@ import {RadioButtonModule} from "primeng/components/radiobutton/radiobutton";
     PersonDetailPartiallyModelDrivenComponent,
     PersonDetailComponent,
     GendersComponent,
+    StartWithADirective,
   ],
   providers: [
     PersonService,
